@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% block title %}Product Details{% endblock title %}
+
+{% block main-content %}
+    <div class="container">
+        <div class="row flex justify-content-between">  
+            <div class="img2 col-lg-5 mt-5">
+                <img src="{{ product.Product_image.url }}" class="image col-xs-6 vol-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75" alt="">    
+            </div>
+            <div class="productdetail col-lg-5">
+                <h1 style="font-family: Georgia; font-size:50px;">{{ product.title }}</h1>
+                
+                <h4 class="mt-4"><strong>Product Features:</strong></h4>
+                <p>{{ product.description }}</p>
+               <h4> <p><strong>Price:</strong> Rs. <strong>{{ product.discounted_price }}</strong>/- <small class="text-decoration-line-through">{{ product.selling_price }}</small></p></h4>
+                
+                <!-- Buttons container -->
+                <div class="button-container mt-3">
+                    <button type="submit" class="d-grid gap-2 btn1 btn btn-danger p-2 m-1 btn-lg text-decoration-none text-white">Add to Cart</button>
+                    <div class="btn btn-dark p-2 m-1 btn-lg">
+                        <a href="#" class="text-decoration-none text-white">Buy Now</a>
+                    </div>
+                </div>
+
+                
+                <ul class="fs-5" style="font-family: Rajdhani;">
+                    <!-- You can add product features here as list items -->
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock main-content %}
